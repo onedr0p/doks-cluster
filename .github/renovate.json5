@@ -33,7 +33,7 @@
         // depName not needed
         "url: (?<registryUrl>.*?)\n *ref: (?<depName>.*?)\n *tag: (?<currentValue>.*)\n"
       ],
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "git-tags"
     }
   ],
   "packageRules": [
