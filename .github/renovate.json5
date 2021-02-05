@@ -30,7 +30,7 @@
     {
       "fileMatch": ["cluster/core/.+crds\\.yaml$"],
       "matchStrings": [
-        "*url: (?<registryUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
+        "url: (?<registryUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
       "datasourceTemplate": "github-tags"
     }
