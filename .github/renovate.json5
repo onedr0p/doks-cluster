@@ -31,9 +31,10 @@
       "fileMatch": ["cluster/core/.+crds\\.yaml$"],
       "matchStrings": [
         // depName not needed
-        "url: (?<sourceUrl>.*?)\n *ref: (?<depName>.*?)\n *tag: (?<currentValue>.*)\n"
+        "url: (?<sourceUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "datasourceTemplate": "git-tags"
+      "depNameTemplate": "git-tags",
+      "datasourceTemplate": "git-refs"
     }
   ],
   "packageRules": [
