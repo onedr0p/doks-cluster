@@ -32,7 +32,7 @@
       "matchStrings": [
         "url: (?<depName>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "versioning": "loose",
+      "versioningTemplate": "loose",
       "datasourceTemplate": "git-tags"
     }
   ],
