@@ -30,9 +30,10 @@
     {
       "fileMatch": ["cluster/core/.+crds\\.yaml$"],
       "matchStrings": [
-        "url: (?<depName>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
+        "url: (?<registryUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "extractVersionTemplate": "^kube-prometheus-stack-(?<version>.*)$",
+      "depNameTemplate": "{{{registryUrl}}}",
+      // "extractVersionTemplate": "^kube-prometheus-stack-(?<version>.*)$",
       "datasourceTemplate": "git-tags"
     }
   ],
