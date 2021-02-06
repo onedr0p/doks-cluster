@@ -32,9 +32,9 @@
       "matchStrings": [
         "url: (?<registryUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "depNameTemplate": "^https://(?<registryUrl>.*).git$",
-      // "extractVersionTemplate": "^kube-prometheus-stack-(?<version>.*)$",
-      "datasourceTemplate": "git-tags"
+      "depNameTemplate": "{{{registryUrl}}}",
+      "datasourceTemplate": "git-tags",
+      "extractVersion": "^kube-prometheus-stack-(?<version>.*)$"
     }
   ],
   "packageRules": [
