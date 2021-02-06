@@ -8,6 +8,7 @@ spec:
   interval: 10m
   url: https://github.com/prometheus-community/helm-charts.git
   ref:
+    # renovate: datasource=git-tags depName=kube-prometheus-stack versioning=regex:^kube-prometheus-stack-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$
     tag: kube-prometheus-stack-13.4.0
   ignore: |
     # exclude all

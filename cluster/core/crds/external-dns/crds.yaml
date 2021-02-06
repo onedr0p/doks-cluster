@@ -8,6 +8,7 @@ spec:
   interval: 10m
   url: https://github.com/kubernetes-sigs/external-dns.git
   ref:
+    # renovate: depName=external-dns versioning=semver
     tag: v0.7.6
   ignore: |
     # exclude all
