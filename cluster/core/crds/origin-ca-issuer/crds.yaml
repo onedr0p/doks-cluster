@@ -8,7 +8,7 @@ spec:
   interval: 10m
   url: https://github.com/cloudflare/origin-ca-issuer.git
   ref:
-    # renovate: datasource=git-tags depName=origin-ca-issuer versioning=semver
+    # renovate: depName=origin-ca-issuer
     tag: v0.5.1
   ignore: |
     # exclude all

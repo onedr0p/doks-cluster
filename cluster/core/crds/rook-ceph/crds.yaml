@@ -8,7 +8,7 @@ spec:
   interval: 10m
   url: https://github.com/rook/rook.git
   ref:
-    # renovate: datasource=git-tags depName=rook versioning=semver
+    # renovate: depName=rook
     tag: v1.5.5
   ignore: |
     # exclude all
