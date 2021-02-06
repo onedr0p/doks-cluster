@@ -9,6 +9,11 @@ spec:
   url: https://github.com/rook/rook.git
   ref:
     tag: v1.5.5
+  ignore: |
+    # exclude all
+    /*
+    # include deploy crds dir
+    !/cluster/examples/kubernetes/ceph/crds.yaml
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
@@ -16,8 +21,7 @@ metadata:
   name: rook-ceph-crds
   namespace: flux-system
 spec:
-  interval: 10m0s
-  path: ./cluster/examples/kubernetes/ceph/crds.yaml
+  interval: 5m
   prune: false
   sourceRef:
     kind: GitRepository
