@@ -35,14 +35,23 @@
     //   "versioningTemplate": "regex:^(kube-prometheus-stack-)?(v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
     //   "datasourceTemplate": "github-tags"
     // }
+    // {
+    //   "fileMatch": ["cluster/core/crds/.+\\.yaml$"],
+    //   "matchStrings": [
+    //     "url: https://github.com/(?<depName>.*?).git\n *ref:\n *tag: (?<currentValue>.*)\n"
+    //   ],
+    //   "datasourceTemplate": "git-tags",
+    //   "lookupNameTemplate": "https://github.com/{{{depName}}}.git",
+    //   "versioningTemplate": "regex:^(kube-prometheus-stack-)?(v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
+    // }
     {
       "fileMatch": ["cluster/core/crds/.+\\.yaml$"],
       "matchStrings": [
         "url: https://github.com/(?<depName>.*?).git\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "datasourceTemplate": "git-tags",
-      "lookupNameTemplate": "https://github.com/{{{depName}}}.git",
-      "versioningTemplate": "regex:^(kube-prometheus-stack-)?(v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:^(kube-prometheus-stack-)?(v)?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$",
+      "depNameTemplate": "{{#if depName == 'prometheus-community/helm-charts'}}kube-prometheus-stack{{else}}{{{depName}}}{{/if}}"
     }
   ],
   "packageRules": [
