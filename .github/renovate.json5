@@ -40,7 +40,7 @@
       "matchStrings": [
         "url: (?<depName>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "depNameTemplate": "{{{packageFile}}}",
+      "lookupNameTemplate": "{{{depName}}}",
       "datasourceTemplate": "git-tags"
     }
   ],
