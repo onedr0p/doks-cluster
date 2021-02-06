@@ -3,3 +3,5 @@ kubeconfig
 # terraform
 terraform/.terraform*
 *.tfstate
+# extra
+ignore/
