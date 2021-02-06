@@ -38,9 +38,9 @@
     {
       "fileMatch": ["cluster/core/crds/.+\\.yaml$"],
       "matchStrings": [
-        "url: (?<depName>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
+        "url: https://github.com/(?<depName>.*?).git\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "lookupNameTemplate": "{{{depName}}}",
+      "lookupNameTemplate": "https://github.com/{{{depName}}}.git",
       "datasourceTemplate": "git-tags"
     }
   ],
