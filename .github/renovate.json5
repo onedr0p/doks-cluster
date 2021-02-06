@@ -32,7 +32,7 @@
       "matchStrings": [
         "url: (?<depName>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "extractVersionTemplate": "^.*-(?<currentValue>.*)$",
+      "extractVersionTemplate": "^kube-prometheus-stack-(?<version>.*)$",
       "datasourceTemplate": "git-tags"
     }
   ],
