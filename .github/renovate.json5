@@ -62,7 +62,7 @@
     {
       "datasources": ["github-tags"],
       "enabled": true,
-      "commitMessageTopic": "crds {{depName}}",
+      "commitMessageTopic": "kubernetes crd {{depName}}",
       "commitMessageExtra": "to {{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}",
       "updateTypes": ["major", "minor", "patch"],
       "separateMinorPatch": true
