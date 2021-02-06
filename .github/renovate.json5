@@ -33,7 +33,7 @@
         "url: https://github.com/(?<depName>.*?).git\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
       // "depNameTemplate": "{{{registryUrl}}}",
-      "datasourceTemplate": "git-tags"
+      "datasourceTemplate": "github-tags"
     }
   ],
   "packageRules": [
