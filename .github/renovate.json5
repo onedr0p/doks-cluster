@@ -32,7 +32,7 @@
       "matchStrings": [
         "url: https://github.com/(?<depName>.*?).git\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      // "depNameTemplate": "{{{registryUrl}}}",
+      "versioningTemplate": "loose",
       "datasourceTemplate": "github-tags"
     }
   ],
