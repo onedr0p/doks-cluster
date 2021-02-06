@@ -36,11 +36,11 @@
     //   "datasourceTemplate": "github-tags"
     // }
     {
-      "fileMatch": ["cluster/core/.+crds\\.yaml$"],
+      "fileMatch": ["cluster/core/crds/.+\\.yaml$"],
       "matchStrings": [
-        "url: (?<registryUrl>.*?)\n ref:\n depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n tag: (?<currentValue>.*)\n"
+        "url: (?<registryUrl>.*?)\n *ref:\n *tag: (?<currentValue>.*)\n"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "{{{packageFile}}}",
       "datasourceTemplate": "git-tags"
     }
   ],
